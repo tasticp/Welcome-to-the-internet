@@ -1,7 +1,3 @@
-<!-- Cosmic Banner -->
-<p align="center">
-  <img src="https://i.ibb.co/p2gQ6yH/galaxy-banner.gif" alt="Cosmic Banner" width="100%">
-</p>
 
 <h1 align="center">🌌 vide code lol hahahah ֎</h1>
 
