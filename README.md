@@ -1,7 +1,9 @@
 
+<a id="readme-top"></a>
 <h1 align="center">🌌 vide code lol hahahah ֎</h1>
 <h3 align="center">ragebait shits🕯️🥀</h3>
 <h3 align="center">this shit kinda funny trust</h3>
+
 
 ---
 
@@ -22,9 +24,12 @@ This project is designed to [✨ *insert balls-blowing one-liner here* ✨].
 ꒷꒦꒷꒦꒷꒦꒷꒦꒷꒦꒷꒦꒷꒦꒷꒦꒷꒦꒷꒦꒷꒦꒷꒦꒷꒦꒷꒦꒷꒦꒷꒷꒦꒷꒦꒷꒦꒷꒦꒷꒦꒷꒦꒷꒦꒷꒦꒷꒦꒷꒦꒷꒦꒷꒦꒷꒦꒷꒦꒷꒦꒷꒦꒷꒦꒷꒦꒷꒦꒷꒦꒷꒦꒷꒦꒷꒦꒷꒦꒷꒦꒷꒦꒷꒦꒷꒦꒷꒦꒷꒦꒷
 | 🧠       | Brain "Vitamins" |
 |-----------|----------------|
+| ▶️🔴        | youtube  |
 | 👟🦈👟   | Italian      |
 | 🪵         | Indonesian  |
 | 👶🏼🍉        | Cocomelon  |
+
+| 🐒        | Kai cenat  |
 | 🫃           | mpreg      |
 | 🍀           | 4Chan      |
 | 🤖🔴         | Reddit     |
@@ -37,7 +42,7 @@ This project is designed to [✨ *insert balls-blowing one-liner here* ✨].
 | 🦅🦅🔥🔥       |AMERICA RAHHHH |
 | 🐨🦘            |Australia  |
 | 🤖✨🧠       |AI |
-| 🕹️🎮       |Games |
+| 🕹️🎮          |Games |
 | 🎮👶🏼            |Roblox  |
 | ⛏️🏗️💥🏡🔫            |Fornite  |
 | ⛏️🧱            |Minecraft  |
@@ -47,38 +52,51 @@ This project is designed to [✨ *insert balls-blowing one-liner here* ✨].
 
 ---
 ## Brain "Vitamins" {/ˈbreɪn ˌrɒt/}
-   What are brian vitamins and are they good for you <br/>
-    It is an outlet for hyperfixation within a person and a connection with people who have the same kind of interest (aka a common ground) to have a start connection <br/>
-    As well as a form of copium [is not a type of drugs for those who do not know what that is]<br/>
-      With the increase of sucide rate showing a slight increase in total number of suicides<br/>
-      As of 2021, the World Health Organization (WHO) estimated that more than 700,000 people die by suicide annually across the globe, with 
-      global age-standardized suicide rate of about 9.0 per 100,000 population<br/>
-        Contributing Factors:<br/>
-          Financial problems<br/>
-            With Entertainment getting more expensive compared to the Wages<br/>
-              i.e. - Movies are Costly<br/>
-                   - The entrance fees of going to some Parks<br/>
-                   - TV Service<br/>
-                   - Games prices (except games by Team cherry ❤️ )<br/>
-          Chronic pain or illness<br/>
-            It can be a form of escapism like distracting themselves from the painful reality that we live in.<br/>
-          Relationship disputes<br/>
-            Bringing laughs and a new type of communication can positively affect the relationships<br/>
-            As the world is slowly (actually quite rapidly) transitioning into this world (digital/physical dating)<br/>
-          Loneliness<br/>
-            To have a commonality with a majority of people instead of finding a niche not many people around you might have <br/>
-            (excluding digital as people still need to have a physical connection is preferred for humans)<br/>
-          Experience of loss, abuse, or violence<br/>
-          Work life balance <br/>
-            When people hear the passive aggressive things that HR/Sales people says<br/>
-            Most Gen Zs would prefer to abolish the Corpo talks and use actual understandable language with actual emotions/tones.<br/>
-            With people thinking the dead inside eyes which we all have being called gen z stare but its just that no one care enough to hide it in front of those that they have no obligation to do so.<br/>
-The most recent estimates for 2021 suggest a slight increase in the total number of suicides, though the age-standardized rate has remained relatively stable. <br/>
-    this is especially helpful especially after coming out of a lockdown from the global quarantine<br/>
-    Something that other generations may not have seen is that this has been sparking creative ideas from this absurd contents<br/>
-    this has been with the context of consuming brianrot without being excessive aka the term "doomscrolling" with the self refection to see this harmful behavior shows that they can catch themselves and not fall too deep <br/>
+
+* What are brian vitamins and are they good for you 
+    * It is an outlet for hyperfixation within a person and a connection with people who have the same kind of interest (aka a common ground) to have a start connection 
+    * As well as a form of copium [is not a type of drugs for those who do not know what that is]
+      * With the increase of sucide rate showing a slight increase in total number of suicides
+      * As of 2021, the World Health Organization (WHO) estimated that more than 700,000 people die by suicide annually across the globe, with global age-standardized suicide rate of about 9.0 per 100,000 population
+        * Contributing Factors:
+          * Financial problems
+            * With Entertainment getting more expensive compared to the Wages
+              * i.e. 
+                - Movies are Costly
+                - The entrance fees of going to some Parks
+                - TV Service
+                - Games prices (except games by Team cherry ❤️ )
+          * Chronic pain or illness
+            * It can be a form of escapism like distracting themselves from the painful reality that we live in.
+          * Relationship disputes
+            * Bringing laughs and a new type of communication can positively affect the relationships
+            * As the world is slowly (actually quite rapidly) transitioning into this world (digital/physical dating)
+          * Loneliness
+            * To have a commonality with a majority of people instead of finding a niche not many people around you might have 
+            (excluding digital as people still need to have a physical connection is preferred for humans)
+          * Experience of loss, abuse, or violence
+          * Work life balance 
+            * When people hear the passive aggressive things that HR/Sales people says
+            * Most Gen Zs would prefer to abolish the Corpo talks and use actual understandable language with actual emotions/tones.
+            * With people thinking the dead inside eyes which we all have being called gen z stare but its just that no one care enough to hide it in front of those that they have no obligation to do so.
+* The most recent estimates for 2021 suggest a slight increase in the total number of suicides, though the age-standardized rate has remained relatively stable. 
+    * this is especially helpful especially after coming out of a lockdown from the global quarantine
+    * Something that other generations may not have seen is that this has been sparking creative * ideas from this absurd contents
+    * this has been with the context of consuming brianrot without being excessive aka the term "doomscrolling" with the self refection to see this harmful behavior shows that they can catch themselves and not fall too deep 
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ---
+
+## Widely known as Brainrot: Skibidi Toilet
+ * Youtube
+    * The Platform that brought notice to the masses though the younger generation
+    * A Machinima web series created by Alexey Gerasimov on his channel, DaFuq!?Boom!.
+    * Produced using Source Filmmaker, the series follows a war between toilets with human heads coming out of their bowls and humanoid characters with electronic devices for heads.
+    
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!--
 ## Hot takes 
