@@ -123,6 +123,10 @@ What the Helly
 What the heliantte
 dats wild
 
+
+
+https://www.reddit.com/r/NoStupidQuestions/comments/1cgk2l7/is_there_a_comprehensiveish_list_of_all_the/
+https://en.m.wikipedia.org/wiki/Glossary_of_2020s_slang
 (1(one)Aint Cap frfr)
 hear me out
 
@@ -166,12 +170,14 @@ finna say i ate
  WORD
 
  low key
-
+crime boss power levels
  im high key
  slay
+ albion online
  delulu solulu
  fanum tax
  edging
+ raid shadow legends
  W big
  rizz
  boat goes binted
