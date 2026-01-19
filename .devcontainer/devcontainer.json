@@ -1,0 +1,153 @@
+{
+  "name": "Welcome to Internet - Development Environment",
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/workspace",
+  
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-vscode.vscode-json",
+        "github.copilot",
+        "ms-vscode.markdownlint",
+        "ms-vscode.makefile-tools",
+        "redhat.vscode-yaml",
+        "streetsidesoftware.code-spell-checker",
+        "shd101w.vscode-git-graph",
+        "github.vscode-pull-request-github",
+        "yzhang.markdown-all-in-one",
+        "bierner.markdown-preview-github-styles",
+        "davidanson.vscode-markdownlint",
+        "hediet.vscode-drawio",
+        "ms-vscode.hexeditor",
+        "ms-vscode.vscode-typescript-next"
+      ],
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "python.linting.enabled": true,
+        "python.linting.pylintEnabled": true,
+        "python.formatting.provider": "black",
+        "python.formatting.blackArgs": ["--line-length=88"],
+        "python.testing.pytestEnabled": true,
+        "python.testing.pytestArgs": ["-v"],
+        "python.testing.unittestEnabled": false,
+        "python.terminal.activateEnvironment": true,
+        "python.linting.mypyEnabled": true,
+        "python.linting.pycodestyleEnabled": true,
+        "python.linting.flake8Enabled": true,
+        "python.linting.pylintArgs": [
+          "--disable=C0111,E1101,W0612"
+        ],
+        "python.linting.flake8Args": [
+          "--max-line-length=88",
+          "--extend-ignore=E203,W503"
+        ],
+        "markdownlint.config": ".markdownlint.json",
+        "markdownlint.run": "onType",
+        "files.associations": {
+          "*.md": "markdown",
+          "*.yml": "yaml",
+          "*.yaml": "yaml",
+          "Makefile": "makefile",
+          "requirements.txt": "pip-requirements"
+        },
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+          "source.fixAll": "explicit",
+          "source.organizeImports": "explicit"
+        },
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "terminal.integrated.cwd": "${workspaceFolder}",
+        "git.enableSmartCommit": true,
+        "git.autofetch": true,
+        "git.confirmSync": false,
+        "makefile.configureOnOpen": "always",
+        "yaml.validate": true,
+        "yaml.schemas": {
+          "https://json.schemastore.org/github-workflow": "*.yml"
+        },
+        "[markdown]": {
+          "editor.wordWrap": "on",
+          "editor.quickSuggestions": {
+            "comments": "on",
+            "strings": "on",
+            "other": "on"
+          },
+          "editor.occurrencesHighlight": false,
+          "editor.folding": true,
+          "editor.lineNumbers": "on",
+          "editor.rulers": [80, 120],
+          "editor.renderWhitespace": "all",
+          "editor.suggest.snippetsPreventQuickSuggestions": true,
+          "editor.suggestSelection": "first",
+          "editor.tabSize": 2,
+          "editor.insertSpaces": true,
+          "editor.detectIndentation": true
+        },
+        "[python]": {
+          "editor.defaultFormatter": "ms-python.black-formatter",
+          "editor.tabSize": 4,
+          "editor.insertSpaces": true,
+          "editor.formatOnSave": true,
+          "editor.rulers": [88],
+          "editor.codeActionsOnSave": {
+            "source.organizeImports": "explicit"
+          }
+        },
+        "[yaml]": {
+          "editor.tabSize": 2,
+          "editor.insertSpaces": true,
+          "editor.autoIndent": "advanced",
+          "editor.formatOnSave": true,
+          "editor.defaultFormatter": "redhat.vscode-yaml"
+        },
+        "[makefile]": {
+          "editor.insertSpaces": false,
+          "editor.tabSize": 4,
+          "editor.useTabStops": true
+        }
+      }
+    }
+  },
+  
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1": {
+      "version": "latest",
+      "installDirectlyFromGitHubRelease": true
+    }
+  },
+  
+  "forwardPorts": [8000, 3000, 5000],
+  "portsAttributes": {
+    "8000": {
+      "label": "Documentation Server",
+      "onAutoForward": true
+    },
+    "3000": {
+      "label": "Interactive Features",
+      "onAutoForward": true
+    },
+    "5000": {
+      "label": "API Server",
+      "onAutoForward": true
+    }
+  },
+  
+  "postCreateCommand": "bash .devcontainer/scripts/setup.sh",
+  "postStartCommand": "bash .devcontainer/scripts/start.sh",
+  
+  "remoteEnv": {
+    "NODE_ENV": "development",
+    "PYTHONPATH": "/workspace",
+    "GIT_AUTHOR_NAME": "DevContainer User",
+    "GIT_AUTHOR_EMAIL": "devcontainer@example.com"
+  },
+  
+  "mounts": [
+    "source=${localWorkspaceFolderBasename}-node_modules,target=/workspace/node_modules,type=volume",
+    "source=${localWorkspaceFolderBasename}-python-cache,target=/root/.cache/pip,type=volume"
+  ],
+  
+  "remoteUser": "vscode"
+}

@@ -1,0 +1,92 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - BUILDKIT_INLINE_CACHE=1
+    volumes:
+      - ..:/workspace:cached
+      - brainrot-node-modules:/workspace/node_modules
+      - brainrot-python-cache:/root/.cache/pip
+    ports:
+      - "8000:8000"  # Documentation server
+      - "3000:3000"  # Interactive features
+      - "5000:5000"  # API server
+      - "6000:6000"  # Analytics dashboard
+    environment:
+      - NODE_ENV=development
+      - PYTHONPATH=/workspace
+      - PYTHONUNBUFFERED=1
+      - GIT_AUTHOR_NAME=DevContainer User
+      - GIT_AUTHOR_EMAIL=devcontainer@example.com
+    command: sleep infinity
+    depends_on:
+      - db
+      - redis
+
+  db:
+    image: postgres:15-alpine
+    restart: unless-stopped
+    volumes:
+      - brainrot-db-data:/var/lib/postgresql/data
+      - brainrot-db-backup:/var/lib/postgresql/backup
+    environment:
+      POSTGRES_DB: brainrot_dev
+      POSTGRES_USER: brainrot_user
+      POSTGRES_PASSWORD: brainrot_password
+      POSTGRES_INITDB_ARGS: "--encoding=UTF-8 --lc-collate=C --lc-ctype=C"
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U brainrot_user -d brainrot_dev"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+    volumes:
+      - brainrot-redis-data:/data
+    ports:
+      - "6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 3
+
+  nginx:
+    image: nginx:alpine
+    restart: unless-stopped
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./ssl:/etc/nginx/ssl:ro
+    ports:
+      - "80:80"
+      - "443:443"
+    depends_on:
+      - app
+    environment:
+      NGINX_HOST: localhost
+      NGINX_PORT: 80
+
+volumes:
+  brainrot-node-modules:
+    driver: local
+  brainrot-python-cache:
+    driver: local
+  brainrot-db-data:
+    driver: local
+  brainrot-db-backup:
+    driver: local
+  brainrot-redis-data:
+    driver: local
+
+networks:
+  default:
+    name: brainrot-dev-network
+    driver: bridge
