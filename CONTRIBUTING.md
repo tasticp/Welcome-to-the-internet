@@ -30,12 +30,14 @@
 ### ✅ **Content Contributions**
 
 **New Slang Terms:**
+
 - Latest Gen Z slang and memes
 - Cultural phenomena and references
 - Platform-specific content (TikTok, Discord, etc.)
 - Regional variations and global perspectives
 
 **Content Types:**
+
 - **Definitions** - Clear explanations of terms
 - **Examples** - Real-world usage and context
 - **Analysis** - Deeper cultural significance
@@ -45,12 +47,14 @@
 ### ✅ **Technical Improvements**
 
 **Documentation:**
+
 - Fix typos and grammar errors
 - Improve formatting and structure
 - Add missing cross-references
 - Enhance navigation and organization
 
 **Code & Automation:**
+
 - GitHub Actions workflows
 - Validation scripts
 - Content generation tools
@@ -59,6 +63,7 @@
 ### ✅ **Community Building**
 
 **Engagement:**
+
 - Issue templates and triage
 - Discussion moderation
 - Contributor recognition
@@ -71,12 +76,14 @@
 ### **Voice & Tone**
 
 **Keep it authentic:**
+
 - Use natural Gen Z slang appropriately
 - Balance humor with serious analysis
 - Maintain the "brainrot" aesthetic
 - Stay culturally relevant and current
 
 **Quality standards:**
+
 - **Accuracy** - Verify claims and sources
 - **Clarity** - Explain complex concepts simply
 - **Context** - Provide cultural background
@@ -85,6 +92,7 @@
 ### **Formatting Standards**
 
 **Markdown Structure:**
+
 ```markdown
 # H1 - Main Title
 ## H2 - Major Sections
@@ -98,6 +106,7 @@
 ```
 
 **Tables:**
+
 ```markdown
 | Term | Definition | Example |
 |------|-----------|---------|
@@ -105,6 +114,7 @@
 ```
 
 **Links:**
+
 - Internal: `[Brainrot Deep Dive](brainrot-deep-dive.md)`
 - External: `[Source](https://example.com)`
 
