@@ -111,6 +111,42 @@ all: install validate test build
 dev: install validate serve
 	@echo "🔧 Development environment ready"
 
+# DevContainer workflow
+devcontainer:
+	@echo "🐳 Setting up development container..."
+	@if command -v code >/dev/null 2>&1; then \
+		echo "✅ VS Code found - opening DevContainer..."; \
+		code --workspace-folder . --new-window; \
+	else \
+		echo "⚠️ VS Code not found - install from https://code.visualstudio.com/"; \
+	fi
+
+# Development server in container
+dev-serve:
+	@echo "🌐 Starting development servers in container..."
+	docker-compose -f docker-compose.yml up --build
+
+# Development shell in container
+dev-shell:
+	@echo "🐚 Opening shell in development container..."
+	docker-compose -f docker-compose.yml exec app bash
+
+# Development logs
+dev-logs:
+	@echo "📊 Showing development logs..."
+	docker-compose -f docker-compose.yml logs -f
+
+# Development status
+dev-status:
+	@echo "🔍 Checking development container status..."
+	docker-compose -f docker-compose.yml ps
+
+# Clean development environment
+dev-clean:
+	@echo "🧹 Cleaning development environment..."
+	docker-compose -f docker-compose.yml down -v
+	docker system prune -f
+
 # Production workflow
 prod: validate build
 	@echo "🚀 Production build ready"
