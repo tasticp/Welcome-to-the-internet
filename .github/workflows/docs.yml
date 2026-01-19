@@ -15,7 +15,7 @@ jobs:
       uses: actions/checkout@v4
       
     - name: Run markdown linter
-      uses: DavidAnson/markdownlint-action@v1
+      uses: DavidAnson/markdownlint-cli2-action@v1
       with:
         files: '**/*.md'
         config: '.markdownlint.json'
