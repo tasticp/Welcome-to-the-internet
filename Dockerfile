@@ -6,13 +6,17 @@ RUN apt-get update && apt-get install -y \
     git \
     curl \
     build-essential \
-    nodejs \
-    npm \
+    ca-certificates \
+    gnupg \
     sqlite3 \
     postgresql-client \
     redis-tools \
     watchdog \
     && rm -rf /var/lib/apt/lists/*
+
+# Install Node.js 18 LTS
+RUN curl -fsSL https://deb.nodesource.com/setup_18.x | bash - \
+    && apt-get install -y nodejs
 
 # Install Python dependencies
 COPY requirements.txt /tmp/
