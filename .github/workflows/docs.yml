@@ -1,0 +1,123 @@
+name: Documentation Quality Check
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  markdown-lint:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Run markdown linter
+      uses: DavidAnson/markdownlint-action@v1
+      with:
+        files: '**/*.md'
+        config: '.markdownlint.json'
+        
+    - name: Check for broken links
+      uses: gaurav-nelson/github-action-markdown-link-check@v1
+      with:
+        use-quiet-mode: 'yes'
+        use-verbose-mode: 'yes'
+
+  validate-structure:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Check required files exist
+      run: |
+        echo "Checking required files..."
+        required_files=("LICENSE" "CONTRIBUTING.md" "README.md" ".gitignore")
+        for file in "${required_files[@]}"; do
+          if [ -f "$file" ]; then
+            echo "✅ $file exists"
+          else
+            echo "❌ $file missing"
+            exit 1
+          fi
+        done
+        
+    - name: Validate directory structure
+      run: |
+        echo "Checking directory structure..."
+        required_dirs=("docs/core" "docs/culture" "docs/platforms" "docs/assets")
+        for dir in "${required_dirs[@]}"; do
+          if [ -d "$dir" ]; then
+            echo "✅ $dir exists"
+          else
+            echo "❌ $dir missing"
+            exit 1
+          fi
+        done
+
+  content-quality:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Check for table of contents
+      run: |
+        echo "Checking for table of contents in main documents..."
+        main_docs=("docs/core/README.md" "docs/core/brainrot-deep-dive.md" "docs/culture/skibidi-toilet.md")
+        for doc in "${main_docs[@]}"; do
+          if [ -f "$doc" ]; then
+            if grep -q "## Table of Contents" "$doc"; then
+              echo "✅ $doc has TOC"
+            else
+              echo "⚠️ $doc missing TOC (not required yet)"
+            fi
+          fi
+        done
+        
+    - name: Check internal links
+      run: |
+        echo "Validating internal links..."
+        find docs -name "*.md" -exec grep -l "\.md" {} \; | while read file; do
+          echo "Checking links in $file"
+          grep -o '\[.*\]([^)]*\.md)' "$file" | while read link; do
+            target=$(echo "$link" | sed 's/.*(\([^)]*\).*/\1/')
+            if [ -f "$target" ]; then
+              echo "✅ $target exists"
+            else
+              echo "❌ $target missing from $file"
+              exit 1
+            fi
+          done
+        done
+
+  spell-check:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Install spell checker
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y aspell aspell-en
+        
+    - name: Run spell check
+      run: |
+        echo "Running spell check on documentation..."
+        find docs -name "*.md" -exec aspell list --lang=en {} \; | sort -u > misspelled.txt
+        if [ -s misspelled.txt ]; then
+          echo "❌ Found misspelled words:"
+          cat misspelled.txt
+          echo ""
+          echo "Note: Some words may be valid slang terms. Review manually."
+          exit 1
+        else
+          echo "✅ No obvious misspellings found"
+        fi

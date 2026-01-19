@@ -1,0 +1,56 @@
+{
+  "default": true,
+  "MD001": true,
+  "MD003": true,
+  "MD004": true,
+  "MD005": true,
+  "MD006": true,
+  "MD007": {
+    "indent": 4
+  },
+  "MD009": true,
+  "MD010": true,
+  "MD011": true,
+  "MD012": true,
+  "MD013": {
+    "line_length": 120,
+    "code_blocks": false,
+    "tables": false
+  },
+  "MD014": true,
+  "MD018": true,
+  "MD019": true,
+  "MD020": true,
+  "MD021": true,
+  "MD022": true,
+  "MD023": true,
+  "MD024": true,
+  "MD025": {
+    "front_matter_title": "^\\s*title\\s*[:=]"
+  },
+  "MD026": true,
+  "MD027": true,
+  "MD028": true,
+  "MD029": true,
+  "MD030": true,
+  "MD031": true,
+  "MD032": true,
+  "MD033": {
+    "allowed_elements": ["div", "span", "sub", "sup"]
+  },
+  "MD034": true,
+  "MD035": true,
+  "MD036": true,
+  "MD037": true,
+  "MD038": true,
+  "MD039": true,
+  "MD040": true,
+  "MD041": true,
+  "MD042": true,
+  "MD043": true,
+  "MD044": true,
+  "MD045": true,
+  "MD046": true,
+  "MD047": true,
+  "MD048": true
+}
