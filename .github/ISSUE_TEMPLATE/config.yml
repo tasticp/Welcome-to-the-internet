@@ -1,0 +1,12 @@
+name: Issue Templates
+
+about: >
+  Welcome to the Welcome to the Internet project! Please use these templates to report issues or request features.
+
+contact_links:
+  - name: GitHub Discussions
+    url: https://github.com/tasticp/Welcome-to-the-internet/discussions
+    about: Please ask and answer questions here
+  - name: Discord Community
+    url: https://discord.gg/brainrot
+    about: Join our community for real-time discussion

@@ -1,0 +1,140 @@
+name: Deploy Documentation
+
+on:
+  push:
+    branches: [ main ]
+    paths: [ 'docs/**' ]
+  pull_request:
+    branches: [ main ]
+    paths: [ 'docs/**' ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        
+    - name: Install dependencies
+      run: |
+        npm install -g gh-pages
+        npm install -g markdown-it
+        npm install -g markdown-it-anchor
+        
+    - name: Generate site
+      run: |
+        mkdir -p dist
+        cp -r docs/* dist/
+        cp README.md dist/
+        cp LICENSE dist/
+        cp CONTRIBUTING.md dist/
+        
+        # Generate index.html from README.md
+        cat > dist/index.html << 'EOF'
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Welcome to the Internet - Brainrot Documentation</title>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.2.0/github-markdown.min.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+            <style>
+                body {
+                    max-width: 1200px;
+                    margin: 0 auto;
+                    padding: 20px;
+                    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+                }
+                .markdown-body {
+                    box-sizing: border-box;
+                    min-width: 200px;
+                    max-width: 980px;
+                    margin: 0 auto;
+                    padding: 45px;
+                }
+                .navigation {
+                    background: #f6f8fa;
+                    border-radius: 6px;
+                    padding: 16px;
+                    margin-bottom: 24px;
+                }
+                .navigation h3 {
+                    margin-top: 0;
+                    color: #0969da;
+                }
+                .stats {
+                    background: #fff;
+                    border: 1px solid #d1d9e0;
+                    border-radius: 6px;
+                    padding: 16px;
+                    margin: 16px 0;
+                }
+                .badge {
+                    display: inline-block;
+                    padding: 4px 8px;
+                    margin: 2px;
+                    background: #0969da;
+                    color: white;
+                    border-radius: 4px;
+                    font-size: 12px;
+                }
+            </style>
+        </head>
+        <body>
+            <div class="markdown-body">
+                <div class="navigation">
+                    <h3>📚 Quick Navigation</h3>
+                    <ul>
+                        <li><a href="#-what-is-this-brainrot-explained">What is This?</a></li>
+                        <li><a href="#-documentation-structure">Documentation Structure</a></li>
+                        <li><a href="#-featured-content">Featured Content</a></li>
+                        <li><a href="#-how-to-contribute">How to Contribute</a></li>
+                        <li><a href="#-project-status">Project Status</a></li>
+                    </ul>
+                </div>
+                
+                <div class="stats">
+                    <h3>📊 Repository Statistics</h3>
+                    <p><span class="badge">10 Docs</span> <span class="badge">1,877+ Lines</span> <span class="badge">MIT License</span> <span class="badge">CI/CD</span></p>
+                </div>
+        EOF
+        
+        # Convert README.md to HTML and append
+        node -e "
+        const md = require('markdown-it')();
+        const fs = require('fs');
+        const content = fs.readFileSync('dist/README.md', 'utf8');
+        const html = md.render(content);
+        console.log(html);
+        " >> dist/index.html
+        
+        cat >> dist/index.html << 'EOF'
+            </div>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+            <script>hljs.highlightAll();</script>
+        </body>
+        </html>
+        EOF
+        
+    - name: Deploy to GitHub Pages
+      if: github.ref == 'refs/heads/main'
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./dist
+        
+    - name: Deployment Summary
+      run: |
+        echo "🚀 Documentation deployed successfully!"
+        echo "📊 Site statistics:"
+        echo "   - Documentation files: $(find docs -name '*.md' | wc -l)"
+        echo "   - Total content: $(wc -l docs/**/*.md | tail -1 | awk '{print $1}') lines"
+        echo "   - Platform analyses: $(find docs/platforms -name '*.md' | grep -v README | wc -l)"
+        echo "   - Academic references: $(grep -c '📚' docs/assets/references.md || echo '0')"

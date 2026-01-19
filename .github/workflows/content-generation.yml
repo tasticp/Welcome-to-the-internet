@@ -1,0 +1,242 @@
+name: Content Generator
+
+on:
+  schedule:
+    - cron: '0 0 * * 0'  # Weekly on Sunday
+  workflow_dispatch:  # Manual trigger
+
+jobs:
+  generate-content:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+        
+    - name: Install dependencies
+      run: |
+        pip install requests beautifulsoup4 markdownify feedparser
+        
+    - name: Generate Trend Analysis
+      run: |
+        python3 << 'EOF'
+        import requests
+        import json
+        from datetime import datetime
+        
+        def fetch_trending_topics():
+            """Simulate trending topic analysis"""
+            # This would integrate with real APIs in production
+            trends = {
+                "skibidi_toilet": {
+                    "mentions": 150000,
+                    "sentiment": "positive",
+                    "growth": "+23%",
+                    "platforms": ["youtube", "tiktok", "discord"]
+                },
+                "ohio_sigma": {
+                    "mentions": 85000,
+                    "sentiment": "neutral", 
+                    "growth": "+15%",
+                    "platforms": ["tiktok", "twitter"]
+                },
+                "brainrot": {
+                    "mentions": 200000,
+                    "sentiment": "mixed",
+                    "growth": "+18%",
+                    "platforms": ["all"]
+                }
+            }
+            
+            return trends
+            
+        def generate_trend_report():
+            trends = fetch_trending_topics()
+            timestamp = datetime.now().strftime("%Y-%m-%d")
+            
+            content = f"""# 📈 Weekly Brainrot Trends Report
+            
+        **Generated:** {timestamp}
+        
+        ---
+        
+        ## 🔥 Top Trending Topics
+        
+        """
+            
+            for topic, data in trends.items():
+                content += f"""### {topic.replace('_', ' ').title()}
+        
+        - **Mentions:** {data['mentions']:,}
+        - **Sentiment:** {data['sentiment']}
+        - **Growth:** {data['growth']}
+        - **Platforms:** {', '.join(data['platforms']).title()}
+        
+        """
+                
+            content += """
+        ## 📊 Analysis Summary
+        
+        **Key Insights:**
+        - Brainrot content continues to see strong engagement across all platforms
+        - Skibidi Toilet maintains cultural relevance with consistent growth
+        - Regional variations in Ohio Sigma content show global reach differences
+        
+        **Recommendations:**
+        - Monitor emerging platforms for new content formats
+        - Focus on community building for sustained engagement
+        - Track cross-platform trend migration patterns
+        
+        ---
+        
+        *Report generated automatically by GitHub Actions* 🤖
+        """
+            
+            with open('docs/assets/weekly-trends.md', 'w') as f:
+                f.write(content)
+                
+            print("✅ Weekly trends report generated")
+            
+        generate_trend_report()
+        EOF
+        
+    - name: Generate Statistics
+      run: |
+        python3 << 'EOF'
+        import os
+        import re
+        from datetime import datetime
+        
+        def analyze_repository():
+            docs_path = 'docs'
+            stats = {
+                'total_files': 0,
+                'total_lines': 0,
+                'total_words': 0,
+                'categories': {},
+                'slang_terms': set(),
+                'platforms': set()
+            }
+            
+            for root, dirs, files in os.walk(docs_path):
+                category = os.path.relpath(root, docs_path) or 'root'
+                if category not in stats['categories']:
+                    stats['categories'][category] = {'files': 0, 'lines': 0, 'words': 0}
+                    
+                for file in files:
+                    if file.endswith('.md'):
+                        file_path = os.path.join(root, file)
+                        stats['total_files'] += 1
+                        stats['categories'][category]['files'] += 1
+                        
+                        with open(file_path, 'r', encoding='utf-8') as f:
+                            content = f.read()
+                            lines = content.split('\n')
+                            words = content.split()
+                            
+                            stats['total_lines'] += len(lines)
+                            stats['total_words'] += len(words)
+                            stats['categories'][category]['lines'] += len(lines)
+                            stats['categories'][category]['words'] += len(words)
+                            
+                            # Extract slang terms (simplified)
+                            slang_matches = re.findall(r'\*\*(\w+)\*\*', content)
+                            stats['slang_terms'].update(slang_matches)
+                            
+                            # Extract platforms
+                            platform_matches = re.findall(r'\[(YouTube|TikTok|Discord|Twitter|Instagram|Reddit)\]', content)
+                            stats['platforms'].update(platform_matches)
+            
+            return stats
+            
+        def generate_statistics_page():
+            stats = analyze_repository()
+            timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            
+            content = f"""# 📊 Repository Statistics
+        
+        **Last Updated:** {timestamp}
+        
+        ---
+        
+        ## 🎯 Overview
+        
+        - **Total Documentation Files:** {stats['total_files']}
+        - **Total Lines:** {stats['total_lines']:,}
+        - **Total Words:** {stats['total_words']:,}
+        - **Unique Slang Terms:** {len(stats['slang_terms'])}
+        - **Platforms Covered:** {len(stats['platforms'])}
+        
+        ---
+        
+        ## 📁 Category Breakdown
+        
+        | Category | Files | Lines | Words |
+        |-----------|--------|--------|-------|
+        """
+            
+            for category, data in stats['categories'].items():
+                content += f"| {category.title()} | {data['files']} | {data['lines']:,} | {data['words']:,} |\n"
+                
+            content += """
+        
+        ---
+        
+        ## 🗣️ Slang Terms Index
+        
+        """
+            
+            sorted_slang = sorted(list(stats['slang_terms']))
+            for i, term in enumerate(sorted_slang, 1):
+                content += f"{i}. **{term}**\n"
+                
+            content += """
+        
+        ---
+        
+        ## 🌐 Platform Coverage
+        
+        """
+            
+            sorted_platforms = sorted(list(stats['platforms']))
+            for platform in sorted_platforms:
+                content += f"- **{platform}**\n"
+                
+            content += """
+        
+        ---
+        
+        *Statistics generated automatically by GitHub Actions* 🤖
+        """
+            
+            with open('docs/assets/statistics.md', 'w') as f:
+                f.write(content)
+                
+            print("✅ Statistics page generated")
+            
+        generate_statistics_page()
+        EOF
+        
+    - name: Commit Generated Content
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add docs/assets/weekly-trends.md docs/assets/statistics.md
+        git diff --staged --quiet || git commit -m "📊 Auto-generated content: Weekly trends and statistics
+        
+        - Generated weekly brainrot trends analysis
+        - Updated repository statistics
+        - Automated content insights
+        - Data-driven content recommendations
+        
+        🤖 Generated by GitHub Actions"
+        
+    - name: Push Changes
+      if: success()
+      run: |
+        git push

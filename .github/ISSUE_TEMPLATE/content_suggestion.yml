@@ -1,0 +1,163 @@
+---
+name: 📝 Content Suggestion
+description: Suggest new content, topics, or improvements to documentation
+title: "[CONTENT]: "
+labels: ["content", "triage"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting content! Help us improve the brainrot documentation with your ideas and expertise.
+
+  - type: dropdown
+    id: content-type
+    attributes:
+      label: Content Type
+      description: What type of content are you suggesting?
+      options:
+        - New Slang/Term Definition
+        - Platform Analysis
+        - Cultural Phenomenon
+        - Academic Research/Reference
+        - Historical Timeline Event
+        - Regional/International Content
+        - Creator/Community Spotlight
+        - Psychological/Sociological Analysis
+        - Economic/Industry Impact
+        - Other
+      default: 0
+    validations:
+      required: true
+
+  - type: input
+    id: topic-title
+    attributes:
+      label: Topic Title
+      description: Brief, descriptive title for your suggested content
+      placeholder: e.g., "The Rise of Fanum Tax Memes"
+    validations:
+      required: true
+
+  - type: textarea
+    id: topic-description
+    attributes:
+      label: Topic Description
+      description: What is this content about and why is it important?
+      placeholder: e.g., "Fanum Tax started as a meme about food being taken, but evolved into..."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: target-audience
+    attributes:
+      label: Target Audience
+      description: Who is this content primarily for?
+      options:
+        - General Public/Newcomers
+        - Gen Z/Internet Natives
+        - Researchers/Academics
+        - Content Creators
+        - Community Members
+        - All Audiences
+      default: 0
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggested-structure
+    attributes:
+      label: Suggested Structure
+      description: How should this content be organized?
+      placeholder: |
+        ## Definition
+        ## Origin & History  
+        ## Cultural Impact
+        ## Examples & Usage
+        ## Related Terms
+    validations:
+      required: false
+
+  - type: textarea
+    id: sources-and-references
+    attributes:
+      label: Sources and References
+      description: Do you have any sources, examples, or references to share?
+      placeholder: e.g., "Seen on TikTok under #fantax, discussed in r/GenZ..."
+    validations:
+      required: false
+
+  - type: dropdown
+    id: where-to-add
+    attributes:
+      label: Where should this be added?
+      description: Which section should this content go in?
+      options:
+        - docs/core/ (main concepts)
+        - docs/culture/ (cultural analysis)
+        - docs/platforms/ (platform-specific)
+        - docs/assets/references.md (references)
+        - Create new section
+        - Not sure - you decide
+      default: 0
+    validations:
+      required: true
+
+  - type: textarea
+    id: related-content
+    attributes:
+      label: Related Content
+      description: What existing content is this related to?
+      placeholder: e.g., "Related to current Skibidi Toilet analysis and Ohio sigma concepts"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: urgency
+    attributes:
+      label: Urgency/Timeliness
+      description: How time-sensitive is this content?
+      options:
+        - Very time-sensitive (trending now)
+        - Current (relevant within months)
+        - Evergreen (always relevant)
+        - Historical/archival
+      default: 1
+    validations:
+      required: true
+
+  - type: textarea
+    id: examples-and-media
+    attributes:
+      label: Examples and Media
+      description: Any specific examples, screenshots, or media to include?
+      placeholder: "Include examples of how this appears in TikTok videos, Discord servers..."
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: contribution-type
+    attributes:
+      label: How would you like to contribute?
+      description: Select all that apply
+      options:
+        - label: I want to write this content myself
+        - label: I can provide examples and sources
+        - label: I want to collaborate with maintainers
+        - label: I prefer maintainers to write this content
+        - label: I can review and edit draft content
+      default: 3
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Confirmation
+      description: Please confirm the following
+      options:
+        - label: This content is appropriate for the repository's educational mission
+          required: true
+        - label: I have verified this isn't already covered
+          required: true
+        - label: I understand this may be edited for style and accuracy
+          required: true
