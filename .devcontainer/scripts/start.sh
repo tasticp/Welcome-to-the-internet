@@ -61,6 +61,71 @@ echo "📊 Setting up development logging..."
 mkdir -p /workspace/logs
 echo "$(date): Development environment started" >> /workspace/logs/dev-session.log
 
+# Start development servers
+echo "🌐 Starting development servers..."
+# Start HTTP server for documentation on port 8000
+cd /workspace
+if command -v http-server >/dev/null 2>&1; then
+    echo "📚 Starting documentation server on port 8000..."
+    http-server docs/ -p 8000 --cors -c-1 --silent &
+elif command -v live-server >/dev/null 2>&1; then
+    echo "📚 Starting live server on port 8000..."
+    live-server docs/ --port=8000 --quiet &
+else
+    echo "📚 Using Python HTTP server on port 8000..."
+    python3 -m http.server 8000 &
+fi
+
+# Start file watcher for auto-reloading
+echo "👀 Starting file watcher..."
+python3 -c "
+import time
+import os
+from watchdog.observers import Observer
+from watchdog.events import FileSystemEventHandler
+
+class ChangeHandler(FileSystemEventHandler):
+    def on_modified(self, event):
+        if event.src_path.endswith('.md'):
+            print(f'📝 Detected changes: {event.src_path}')
+            os.system('make validate > /dev/null 2>&1 &')
+
+if __name__ == '__main__':
+    event_handler = ChangeHandler()
+    observer = Observer()
+    observer.schedule(event_handler, path='/workspace/docs', recursive=True)
+    observer.start()
+    try:
+        while True:
+            time.sleep(1)
+    except KeyboardInterrupt:
+        observer.stop()
+" &
+
+# Set up development log entry
+echo "$(date): Development services started" >> /workspace/logs/dev-session.log
+
+# Display development status
+echo ""
+echo "🎯 Development Environment Status:"
+echo "  ✅ Python: $(python3 --version)"
+echo "  ✅ Node.js: $(node --version 2>/dev/null || echo 'Not installed')"
+echo "  ✅ Git: $(git --version)"
+echo "  ✅ Workspace: $(pwd)"
+echo "  ✅ Documentation: $(find /workspace/docs -name '*.md' | wc -l) files"
+
+# Show available ports and services
+echo ""
+echo "🌐 Available Services:"
+echo "  📚 Documentation Server: http://localhost:8000"
+echo "  🔍 Search API: http://localhost:5000"
+echo "  📊 Analytics Dashboard: http://localhost:6000"
+
+# Create welcome message
+echo ""
+echo "🎉 Welcome to Internet development environment ready!"
+echo "📚 Happy documentation hacking! 🔥"
+
 # Display development status
 echo ""
 echo "🎯 Development Environment Status:"

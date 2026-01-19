@@ -14,13 +14,39 @@ echo "🐍 Setting up Python environment..."
 python3 -m pip install --upgrade pip
 pip install -r /workspace/requirements.txt
 
-# Install Node.js dependencies if package.json exists
-if [ -f "/workspace/package.json" ]; then
-    echo "📦 Installing Node.js dependencies..."
-    cd /workspace
-    npm install
-    cd ..
+# Create package.json if it doesn't exist
+if [ ! -f "/workspace/package.json" ]; then
+    echo "📦 Creating package.json for development tools..."
+    cat > /workspace/package.json << 'EOF'
+{
+  "name": "welcome-to-the-internet-dev",
+  "version": "1.0.0",
+  "description": "Development environment for Welcome to Internet project",
+  "main": "index.html",
+  "scripts": {
+    "dev": "make dev-serve",
+    "build": "make build",
+    "validate": "make validate",
+    "test": "make test"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "live-server": "^1.2.1",
+    "nodemon": "^3.0.1",
+    "concurrently": "^8.2.0"
+  },
+  "devDependenciesMeta": {
+    "npm": "9.6.7",
+    "node": "18.17.0"
+  }
+}
+EOF
 fi
+
+# Install Node.js dependencies
+echo "📦 Installing Node.js dependencies..."
+cd /workspace
+npm install
 
 # Set up git configuration
 echo "🔧 Setting up Git configuration..."
