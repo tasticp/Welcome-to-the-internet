@@ -125,12 +125,14 @@
 ### ❌ **Content to Avoid**
 
 **Inappropriate Material:**
+
 - Hate speech or discriminatory content
 - Explicit sexual content
 - Illegal activities or instructions
 - Personal attacks or harassment
 
 **Low-Quality Contributions:**
+
 - Unverified claims or rumors
 - Spam or self-promotion
 - Duplicate or redundant content
@@ -139,6 +141,7 @@
 ### ❌ **Formatting Issues**
 
 **Common Problems:**
+
 - Inconsistent heading levels
 - Broken internal links
 - Poor table formatting
@@ -151,18 +154,21 @@
 ### **PR Review Criteria**
 
 **Content Quality:**
+
 - ✅ Accurate information
 - ✅ Clear explanations
 - ✅ Proper formatting
 - ✅ Relevant examples
 
 **Technical Standards:**
+
 - ✅ Valid markdown
 - ✅ Working links
 - ✅ Consistent style
 - ✅ Proper attribution
 
 **Community Fit:**
+
 - ✅ Appropriate tone
 - ✅ Cultural relevance
 - ✅ Educational value
@@ -171,11 +177,13 @@
 ### **Review Timeline**
 
 **Response Times:**
+
 - **Initial review**: 1-3 days
 - **Feedback provided**: Within 1 week
 - **Merge decision**: After revisions complete
 
 **Review Types:**
+
 - **Content review** - Accuracy and relevance
 - **Technical review** - Formatting and links
 - **Style review** - Voice and consistency
@@ -187,6 +195,7 @@
 ### **Contributor Attribution**
 
 **Ways we recognize contributors:**
+
 - **README credits** - Listed in acknowledgments
 - **File attribution** - Named in document headers
 - **Release notes** - Mentioned in changelog
@@ -195,6 +204,7 @@
 ### **Levels of Contribution**
 
 **Recognition Tiers:**
+
 - **🌟 Brainrot Scholar** - Academic contributions
 - **🔥 Culture King** - Trend identification
 - **💀 Meme Lord** - Humor and entertainment
@@ -208,11 +218,13 @@
 ### **Local Development**
 
 **Prerequisites:**
+
 - Git installed
 - Markdown editor (VS Code recommended)
 - Basic familiarity with GitHub
 
 **Recommended Tools:**
+
 - **Markdown Preview** - VS Code extension
 - **Markdown Lint** - Style checking
 - **Link Checker** - Validate links
@@ -221,6 +233,7 @@
 ### **Testing Your Changes**
 
 **Before submitting:**
+
 1. **Preview** your markdown changes
 2. **Check** all internal links work
 3. **Validate** table formatting
@@ -234,11 +247,13 @@
 ### **Support Channels**
 
 **For Questions:**
+
 - **GitHub Issues** - Technical problems
 - **Discussions** - General questions
 - **Pull Requests** - Contribution feedback
 
 **Community Resources:**
+
 - **Wiki** - Detailed documentation
 - **Templates** - Starting points
 - **Examples** - Best practices
@@ -247,10 +262,12 @@
 ### **Contact Information**
 
 **Maintainers:**
+
 - **Primary** - [@tasticp](https://github.com/tasticp)
 - **Community** - GitHub Discussions
 
 **Response Times:**
+
 - **Urgent issues** - 24-48 hours
 - **General questions** - 3-5 days
 - **Feature requests** - Weekly review
@@ -262,12 +279,14 @@
 ### **Content Rights**
 
 **By contributing, you agree:**
+
 - Your content is original or properly attributed
 - You have the right to share it under MIT license
 - You follow all applicable laws and guidelines
 - You respect intellectual property rights
 
 **License Terms:**
+
 - All contributions under MIT license
 - Proper attribution required
 - Commercial use permitted
@@ -275,11 +294,12 @@
 
 ---
 
-## 🎉 Thank You!
+## 🎉 Thank You
 
 **Real talk** - we couldn't do this without you! 🫂
 
 **Every contribution helps:**
+
 - Document internet culture
 - Preserve digital history
 - Build community knowledge
@@ -292,5 +312,3 @@
 *"Im cooking no lie" - with your help* 🔥
 
 ---
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>

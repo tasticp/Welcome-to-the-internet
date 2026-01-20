@@ -84,7 +84,15 @@ jobs:
           echo "Checking links in $file"
           grep -o '\[.*\]([^)]*\.md)' "$file" | while read link; do
             target=$(echo "$link" | sed 's/.*(\([^)]*\).*/\1/')
-            if [ -f "$target" ]; then
+            # Get directory of the current file
+            file_dir=$(dirname "$file")
+            # Resolve relative path
+            if [[ "$target" == ../* ]]; then
+              full_target=$(realpath "$file_dir/$target")
+            else
+              full_target="$target"
+            fi
+            if [ -f "$full_target" ]; then
               echo "✅ $target exists"
             else
               echo "❌ $target missing from $file"

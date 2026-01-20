@@ -16,11 +16,15 @@
 
 ## 🧠 What is This? (Brainrot Explained)
 
-**Welcome to the Internet** = Your one-stop shop for all things brainrot, memes, and Gen Z slang. This is where digital culture goes to get absolutely **COOKED** 🔥
+**Welcome to the Internet** = Your one-stop shop for all things brainrot, memes, and Gen Z slang. 
+This is where digital culture goes to get absolutely **COOKED** 🔥
 
-**Brain Vitamins** (aka brainrot {/ˈbreɪn ˌrɒt/}) = That content that makes you go "what the helly" but you can't stop watching. It's giving **Cocomelon energy** but for the internet generation 👶🏼🍉
+**Brain Vitamins** (aka brainrot {/ˈbreɪn ˌrɒt/}) = That content that makes you go "what the helly" 
+but you can't stop watching. It's giving **Cocomelon energy** but for the internet generation 👶🏼🍉
 
-**Why it matters:** Brainrot isn't just random content - it's a [hyperfixation outlet, community connection, and coping mechanism](docs/core/brainrot-deep-dive.md). **Big facts** - there's actual science behind why we can't stop watching Skibidi Toilet 🚽
+**Why it matters:** Brainrot isn't just random content - it's a [hyperfixation outlet, community connection, 
+and coping mechanism](docs/core/brainrot-deep-dive.md). **Big facts** - there's actual science behind 
+why we can't stop watching Skibidi Toilet 🚽
 
 > 💡 **Want the full breakdown?** Check out the [Brainrot Deep Dive](docs/core/brainrot-deep-dive.md) and [Mental Health Context](docs/core/mental-health-context.md)
 
@@ -28,12 +32,14 @@
 
 ## 📚 Documentation Structure
 
-### **🎯 Core Concepts** 
+### **🎯 Core Concepts**
+
 - **[Brainrot Deep Dive](docs/core/brainrot-deep-dive.md)** - The science behind why we consume this content
 - **[Mental Health Context](docs/core/mental-health-context.md)** - The psychological significance and real impact
 - **[Main README](docs/core/README.md)** - Comprehensive guide with all slang and references
 
 ### **🌍 Cultural Analysis**
+
 - **[Skibidi Toilet](docs/culture/skibidi-toilet.md)** - The ultimate brainrot phenomenon breakdown
 - **[Cultural References](docs/culture/cultural-references.md)** - Deep dive into internet culture and memes
 
@@ -62,18 +68,21 @@
 ### **Essential Gen Z Slang**
 
 **Rizz & Glazing:**
+
 - **Rizz** - Charisma on 100
 - **Rizzler** - The rizz master
 - **Glazing** - Overhyping someone
 - **Pearly gates** - That good good
 
 **Power Levels:**
+
 - **Sigma** - Lone wolf energy
 - **Alpha** - Top tier
 - **HIM** - The one
 - **GOAT** - Greatest of all time
 
 **Vibe Check:**
+
 - **No cap** - For real
 - **Fr fr** - For real for real
 - **Big facts** - Facts
@@ -84,9 +93,10 @@
 
 ## 🤝 How to Contribute
 
-**Want to add more brainrot?** **Hear me out** - we need your help! 
+**Want to add more brainrot?** **Hear me out** - we need your help!
 
 **Easy ways to contribute:**
+
 - Add new slang terms and definitions
 - Share meme references and cultural phenomena
 - Suggest improvements to existing content
@@ -102,6 +112,7 @@
 ## 🛠️ Project Status
 
 ### **✅ Completed Features**
+
 - [x] Comprehensive documentation structure
 - [x] MIT License implementation
 - [x] Contribution guidelines
@@ -109,6 +120,7 @@
 - [x] Cultural analysis
 
 ### **🚧 In Progress**
+
 - [ ] Platform-specific deep dives
 - [ ] Academic citations and references
 - [ ] Automated content validation
@@ -116,6 +128,7 @@
 - [ ] Multi-language support
 
 ### **🎯 Planned Features**
+
 - [ ] Static site generation
 - [ ] Interactive timeline
 - [ ] Community voting system
@@ -137,11 +150,13 @@
 ## 🌍 Community
 
 ### **📊 Repository Stats**
+
 [![GitHub stars](https://img.shields.io/github/stars/tasticp/Welcome-to-the-internet?style=social)](https://github.com/tasticp/Welcome-to-the-internet/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/tasticp/Welcome-to-the-internet?style=social)](https://github.com/tasticp/Welcome-to-the-internet/network)
 [![GitHub issues](https://img.shields.io/github/issues/tasticp/Welcome-to-the-internet)](https://github.com/tasticp/Welcome-to-the-internet/issues)
 
 ### **💬 Get Involved**
+
 - **🐛 Report Issues:** [GitHub Issues](https://github.com/tasticp/Welcome-to-the-internet/issues)
 - **💡 Suggest Features:** [Discussions](https://github.com/tasticp/Welcome-to-the-internet/discussions)
 - **🤝 Contribute:** [Pull Requests](https://github.com/tasticp/Welcome-to-the-internet/pulls)
@@ -157,6 +172,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 🙏 Acknowledgments
 
 **Real talk** - this project exists thanks to:
+
 - The entire brainrot community for inspiration
 - Contributors who help document internet culture
 - Researchers studying digital phenomena
@@ -165,5 +181,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **This shit kinda funny trust** - but also kinda important 💀
 
 ---
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
