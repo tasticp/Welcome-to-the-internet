@@ -87,11 +87,7 @@ jobs:
             # Get directory of the current file
             file_dir=$(dirname "$file")
             # Resolve relative path
-            if [[ "$target" == ../* ]]; then
-              full_target=$(realpath "$file_dir/$target")
-            else
-              full_target="$target"
-            fi
+            full_target="$file_dir/$target"
             if [ -f "$full_target" ]; then
               echo "✅ $target exists"
             else
