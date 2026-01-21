@@ -23,9 +23,8 @@ jobs:
         
     - name: Install dependencies
       run: |
-        npm install -g gh-pages
-        npm install -g markdown-it
-        npm install -g markdown-it-anchor
+        npm init -y
+        npm install gh-pages markdown-it markdown-it-anchor
         
     - name: Generate site
       run: |
