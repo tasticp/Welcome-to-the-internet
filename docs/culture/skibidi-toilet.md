@@ -141,7 +141,7 @@ Skibidi Toilet represents everything about modern internet culture:
 - [Brainrot Deep Dive](../core/brainrot-deep-dive.md) - Why we consume this
 - [Mental Health Context](../core/mental-health-context.md) - The deeper meaning
 - [Cultural References](cultural-references.md) - More internet culture
-- [Back to README](README.md) - Go home
+- [Back to Culture README](README.md) - Go home
 
 ---
 

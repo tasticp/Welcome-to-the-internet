@@ -1,0 +1,34 @@
+{
+  "ignorePatterns": [
+    {
+      "pattern": "^http://localhost"
+    },
+    {
+      "pattern": "^https://staging\\.welcome-to-internet\\.dev"
+    },
+    {
+      "pattern": "^https://welcome-to-internet\\.com"
+    },
+    {
+      "pattern": "^https://tasticp\\.github\\.io/Welcome-to-the-internet$"
+    },
+    {
+      "pattern": "^https://github\\.com/tasticp/Welcome-to-the-internet/network$"
+    }
+  ],
+  "replacementPatterns": [],
+  "httpHeaders": [
+    {
+      "urls": ["https://github.com"],
+      "headers": {
+        "Accept": "text/html",
+        "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36"
+      }
+    }
+  ],
+  "timeout": "20s",
+  "retryOn429": true,
+  "retryCount": 3,
+  "fallbackRetryDelay": "30s",
+  "aliveStatusCodes": [200, 206, 301, 302, 303, 307, 308]
+}
