@@ -16,17 +16,18 @@
 
 ## 🧠 What is This? (Brainrot Explained)
 
-**Welcome to the Internet** = Your one-stop shop for all things brainrot, memes, and Gen Z slang. 
+**Welcome to the Internet** = Your one-stop shop for all things brainrot, memes, and Gen Z slang.
 This is where digital culture goes to get absolutely **COOKED** 🔥
 
-**Brain Vitamins** (aka brainrot {/ˈbreɪn ˌrɒt/}) = That content that makes you go "what the helly" 
+**Brain Vitamins** (aka brainrot {/ˈbreɪn ˌrɒt/}) = That content that makes you go "what the helly"
 but you can't stop watching. It's giving **Cocomelon energy** but for the internet generation 👶🏼🍉
 
-**Why it matters:** Brainrot isn't just random content - it's a [hyperfixation outlet, community connection, 
-and coping mechanism](docs/core/brainrot-deep-dive.md). **Big facts** - there's actual science behind 
+**Why it matters:** Brainrot isn't just random content - it's a [hyperfixation outlet, community connection,
+and coping mechanism](docs/core/brainrot-deep-dive.md). **Big facts** - there's actual science behind
 why we can't stop watching Skibidi Toilet 🚽
 
-> 💡 **Want the full breakdown?** Check out the [Brainrot Deep Dive](docs/core/brainrot-deep-dive.md) and [Mental Health Context](docs/core/mental-health-context.md)
+> 💡 **Want the full breakdown?** Check out the [Brainrot Deep Dive](docs/core/brainrot-deep-dive.md) and  
+> [Mental Health Context](docs/core/mental-health-context.md)
 
 ---
 
