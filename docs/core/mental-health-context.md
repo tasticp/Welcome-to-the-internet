@@ -119,7 +119,7 @@ Mental health is complex, and digital content (including brainrot) plays a role 
 ## 🔗 Related Topics
 
 - [Brainrot Deep Dive](brainrot-deep-dive.md) - The science behind it
-- [Cultural References](cultural-references.md) - More context
+- [Cultural References](../culture/cultural-references.md) - More context
 - [Back to README](README.md) - Go home
 
 ---

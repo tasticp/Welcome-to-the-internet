@@ -43,7 +43,7 @@
 
 | Thing | Icon | Vibe |
 |-------|------|------|
-| **Skibidi Toilet** | 🚽 | Ohio sigma grindset - [Full breakdown here](skibidi-toilet.md) |
+| **Skibidi Toilet** | 🚽 | Ohio sigma grindset - [Full breakdown here](../culture/skibidi-toilet.md) |
 | **YouTube** | ▶️🔴 | Trelleleo trellala |
 | **Roblox** | 🎮👶🏼 | Cocomelon brainrot |
 | **Fortnite** | ⛏️🏗️💥 | Skibidi toilet vibes |
@@ -115,7 +115,7 @@
 - 🧴🧴 **P DIDDY** (Sean Combs) - Blazing fast and optimized. **What the sigma**
 - 💀 **DE4D** - The ultimate reference
 
-> 📚 **Want more?** Check out the [Cultural References Deep Dive](cultural-references.md) for all the tea ☕
+> 📚 **Want more?** Check out the [Cultural References Deep Dive](../culture/cultural-references.md) for all the tea ☕
 
 ---
 

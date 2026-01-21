@@ -279,8 +279,8 @@ Do you have any sources or examples?
 
 ## 🔗 Related Topics
 
-- [Contributing Guidelines](../CONTRIBUTING.md) - How to contribute
-- [Project README](../README.md) - Main project documentation
+- [Contributing Guidelines](../../CONTRIBUTING.md) - How to contribute
+- [Project README](../../README.md) - Main project documentation
 - [Platform Analyses](../platforms/) - Technical documentation
 - [Cultural References](../culture/cultural-references.md) - Content context
 

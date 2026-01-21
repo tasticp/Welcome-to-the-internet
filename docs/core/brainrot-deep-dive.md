@@ -78,7 +78,7 @@ Brainrot isn't just random internet nonsense - it's a legitimate form of digital
 ## 🔗 Related Topics
 
 - [Mental Health Context](mental-health-context.md) - The deeper stuff
-- [Skibidi Toilet Breakdown](skibidi-toilet.md) - The ultimate brainrot
+- [Skibidi Toilet Breakdown](../culture/skibidi-toilet.md) - The ultimate brainrot
 - [Back to README](README.md) - Go home
 
 ---

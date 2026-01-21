@@ -99,11 +99,11 @@ make deploy
 ### **GitHub Actions Workflows**
 
 #### **Primary Workflows**
-1. **[docs.yml](../.github/workflows/docs.yml)** - Documentation quality checks
-2. **[interactive-features.yml](../.github/workflows/interactive-features.yml)** - Interactive content generation
-3. **[content-generation.yml](../.github/workflows/content-generation.yml)** - Automated content updates
-4. **[deploy.yml](../.github/workflows/deploy.yml)** - Static site deployment
-5. **[security.yml](../.github/workflows/security.yml)** - Security scanning
+1. **[docs.yml](../../.github/workflows/docs.yml)** - Documentation quality checks
+2. **[interactive-features.yml](../../.github/workflows/interactive-features.yml)** - Interactive content generation
+3. **[content-generation.yml](../../.github/workflows/content-generation.yml)** - Automated content updates
+4. **[deploy.yml](../../.github/workflows/deploy.yml)** - Static site deployment
+5. **[security.yml](../../.github/workflows/security.yml)** - Security scanning
 
 #### **Pipeline Stages**
 ```yaml
@@ -530,7 +530,7 @@ pg_restore backup_YYYYMMDD.sql
 
 ## 🔗 Related Topics
 
-- [DevContainer Setup](../devcontainer/README.md) - Development environment
+- [DevContainer Setup](../../.devcontainer/README.md) - Development environment
 - [Automation Scripts](../assets/scripts.md) - Development tools
 - [CI/CD Workflows](../../.github/workflows/) - Automated pipelines
 - [Project README](../core/README.md) - Main documentation
