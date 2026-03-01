@@ -1,6 +1,6 @@
 # 📊 Repository Statistics
 
-**Last Updated:** 2026-02-22 02:37:06
+**Last Updated:** 2026-03-01 02:44:25
 
 ---
 
@@ -19,9 +19,9 @@
 | Category | Files | Lines | Words |
 |-----------|--------|--------|-------|
 | . | 0 | 0 | 0 |
+| Assets | 8 | 2,550 | 7,839 |
 | Culture | 5 | 702 | 3,190 |
 | Platforms | 4 | 939 | 3,405 |
-| Assets | 8 | 2,550 | 7,839 |
 | Core | 3 | 362 | 1,817 |
 
 
