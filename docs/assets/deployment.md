@@ -94,40 +94,6 @@ make deploy
 
 ---
 
-## 🔄 CI/CD Pipeline
-
-### **GitHub Actions Workflows**
-
-#### **Primary Workflows**
-1. **[docs.yml](../../.github/workflows/docs.yml)** - Documentation quality checks
-2. **[interactive-features.yml](../../.github/workflows/interactive-features.yml)** - Interactive content generation
-3. **[content-generation.yml](../../.github/workflows/content-generation.yml)** - Automated content updates
-4. **[deploy.yml](../../.github/workflows/deploy.yml)** - Static site deployment
-5. **[security.yml](../../.github/workflows/security.yml)** - Security scanning
-
-#### **Pipeline Stages**
-```yaml
-stages:
-  - validate    # Content quality and links
-  - test        # Automated testing
-  - build       # Static site generation
-  - security    # Vulnerability scanning
-  - deploy      # Production deployment
-  - monitor     # Post-deployment checks
-```
-
-### **Quality Gates**
-
-| Check | Tool | Success Criteria |
-|--------|------|-----------------|
-| **Markdown Quality** | markdownlint | No errors, warnings ≤ 5 |
-| **Link Validation** | link-checker | 100% internal links valid |
-| **Content Validation** | content-validator.py | No critical issues |
-| **Security Scan** | Trivy | No high vulnerabilities |
-| **Performance** | Lighthouse | Score ≥ 90 |
-
----
-
 ## 🚀 Production Deployment
 
 ### **Static Site Deployment**
@@ -532,7 +498,6 @@ pg_restore backup_YYYYMMDD.sql
 
 - [DevContainer Setup](../../.devcontainer/README.md) - Development environment
 - [Automation Scripts](../assets/scripts.md) - Development tools
-- [CI/CD Workflows](../../.github/workflows/) - Automated pipelines
 - [Project README](../core/README.md) - Main documentation
 - [Contributing Guidelines](../../CONTRIBUTING.md) - How to contribute
 

@@ -311,7 +311,6 @@ docker volume prune -f
 - [Development Tools](../docs/assets/scripts.md) - Automation scripts
 - [Contributing Guidelines](../CONTRIBUTING.md) - How to contribute
 - [Project README](../docs/core/README.md) - Main documentation
-- [Automation Workflows](../.github/workflows/) - CI/CD pipeline
 
 ---
 
