@@ -1,14 +1,14 @@
 # 📊 Repository Statistics
 
-**Last Updated:** 2026-04-05 02:53:29
+**Last Updated:** 2026-04-12 03:18:14
 
 ---
 
 ## 🎯 Overview
 
 - **Total Documentation Files:** 20
-- **Total Lines:** 4,553
-- **Total Words:** 16,251
+- **Total Lines:** 4,518
+- **Total Words:** 16,101
 - **Unique Slang Terms:** 83
 - **Platforms Covered:** 3
 
@@ -19,10 +19,10 @@
 | Category | Files | Lines | Words |
 |-----------|--------|--------|-------|
 | . | 0 | 0 | 0 |
+| Assets | 8 | 2,515 | 7,689 |
+| Culture | 5 | 702 | 3,190 |
 | Core | 3 | 362 | 1,817 |
 | Platforms | 4 | 939 | 3,405 |
-| Assets | 8 | 2,550 | 7,839 |
-| Culture | 5 | 702 | 3,190 |
 
 
 ---
