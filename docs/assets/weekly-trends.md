@@ -1,6 +1,6 @@
 # 📈 Weekly Brainrot Trends Report
     
-**Generated:** 2026-06-14
+**Generated:** 2026-06-21
 
 ---
 
